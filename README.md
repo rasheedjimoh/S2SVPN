@@ -34,6 +34,7 @@ Alright, first things first, let's head over to the Azure Portal. Once you're lo
 
 ![image](https://github.com/rasheedjimoh/S2SVPN/assets/157264080/0be2751e-fb34-433f-861a-9d1130c34309)
 
+*Ref 1: Deploying Virtual network*
 
 
 Step 2: **Configuring Local Network Gateway**
@@ -41,36 +42,45 @@ Now, let's set up our Local Network Gateway. This essentially represents our on-
 
 ![image](https://github.com/rasheedjimoh/S2SVPN/assets/157264080/2bb293b7-3039-4c7c-8d5f-4ebec6f11d77)
 
+*Ref 2: Deploying Local network*
 
 Step 3: **Provisioning Public IP Address**
 Next, we need to provision a Public IP address for our Azure resources. This will be used for our Virtual Network Gateway. Simply go to Public IP addresses in the Networking section, click on "+ Create," and fill in the necessary details.
 
 ![Screenshot 2024-02-12 162156](https://github.com/rasheedjimoh/S2SVPN/assets/157264080/96f6dcea-10af-48bd-bc1b-6b98cdb14155)
 
+*Ref 3: Public IP provisioning*
 
 Step 4: **Deploying Virtual Network Gateway**
 Now, let's set up our Virtual Network Gateway. This will handle the VPN connection between Azure and our on-premises network. Head over to Virtual Network Gateways in the Networking section, click on "+ Add," and fill in the required information. Make sure to select the correct VPN type, which in our case is Route-based.
 
 ![s2s-0](https://github.com/rasheedjimoh/S2SVPN/assets/157264080/72f47ba1-d4ad-4f04-9aaf-120b16e7ecdd)
-
+*Ref 4: Deploying Virtual network gateway*
 
 Step 5: **Configuring Windows Server**
 Moving on to our on-premises side, we'll need to configure our Windows Server. We'll be using the Routing and Remote Access Service role. So, open up Server Manager, navigate to Add Roles and Features, select the Routing and Remote Access Service, and follow the wizard to install and configure it.
 
 ![RRAS](https://github.com/rasheedjimoh/S2SVPN/assets/157264080/e8dc75a6-ee86-4f07-acbe-090f43213b8d)
 
+*Ref 5: Routing and Remote Access Service Custom Configuration*
+
 -----
 
 ![RRAS-0](https://github.com/rasheedjimoh/S2SVPN/assets/157264080/7dc2c9bc-bbe2-42f7-bca2-64ee73e8015c)
+
+*Ref 6: Routing and Remote Access Service (Network Interface)*
 
 -----
 
 ![RRAS-1](https://github.com/rasheedjimoh/S2SVPN/assets/157264080/89ab6276-9f19-4e14-b919-6546244406bf)
 
+*Ref 7: VPN Property - Redial must be set to 0*
+
 -----
 
 ![RRAS-2](https://github.com/rasheedjimoh/S2SVPN/assets/157264080/d5888773-a6aa-47f3-92aa-4b8c7ae5f098)
 
+*Ref 8: Security - IKEv2 - Shared Key*
 
 -----
 
@@ -80,8 +90,9 @@ Lastly, let's establish the VPN connection from our Windows Server to Azure. Ope
 
 ![RRAS-3](https://github.com/rasheedjimoh/S2SVPN/assets/157264080/097120c0-1ca0-40d8-ae3a-5916fdc12b89)
 
+*Ref 9: Site-to-Site VPN connecting*
 
 We've successfully set up a Site-to-Site VPN connection between our on-premises network and Azure.
 
 ![Screenshot 2024-02-12 160349](https://github.com/rasheedjimoh/S2SVPN/assets/157264080/e11a5370-a351-4f58-a95f-2086f2f37ee5)
-*Ref 1: Site-to-Site VPN Connected successfully*
+*Ref 10: Site-to-Site VPN Connected successfully*
