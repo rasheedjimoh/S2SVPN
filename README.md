@@ -1,4 +1,4 @@
-# Site-to-Site VPN(IPsec)
+# Site-to-Site VPN (IPsec)
 
 ## Objective
 
@@ -96,3 +96,6 @@ We've successfully set up a Site-to-Site VPN connection between our on-premises 
 
 ![Screenshot 2024-02-12 160349](https://github.com/rasheedjimoh/S2SVPN/assets/157264080/e11a5370-a351-4f58-a95f-2086f2f37ee5)
 *Ref 10: Site-to-Site VPN Connected successfully*
+
+![image](https://github.com/rasheedjimoh/S2SVPN/assets/157264080/f73c659a-8b02-488e-90a9-b446c51f7ddd)
+*Ref 11: Site-to-Site VPN Connected successfully*
